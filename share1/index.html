@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+
+    <meta name="description" content="_Materials">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="jquery.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body style="height:100vh;">
+
+    </div>
+
+    <video playsinline autoplay muted loop poster="">
+    <source src="img/px.mp4" type="video/webm">
+    <source src="img/px" type="video/mp4">
+  </video>
+
+    <div class="container">
+        <div class="wrap">
+
+            <img src="img/pnt.png">
+            <script>
+                $(document).ready(function() {
+                    let r = (Math.random() + 1).toString(36).substring('hash');
+                    var baseUrl = (window.location).href;
+                    var url = baseUrl.substring(baseUrl.lastIndexOf('=') + 1);
+                    $("#x1 ").html(url);
+                    $('.wrap').click(function() {
+                        window.location.href = `index2.html?${r}=${url}`;
+                    });
+                });
+            </script>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
